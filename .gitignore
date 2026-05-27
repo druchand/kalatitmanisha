@@ -39,3 +39,11 @@ yarn-error.*
 # generated native folders
 /ios
 /android
+
+# backend split (kept as separate nested repo)
+/backend
+/services/kalatitmanisha-backend
+
+# local tooling
+.venv-imagegen/
+.netlify/

@@ -1,31 +1,47 @@
 {
   "expo": {
-    "name": "कालातीत मनीषा\nTimeless Wisdom",
+    "name": "Kalatit Manisha",
     "slug": "KalatitManisha",
     "scheme": "kalatitmanisha",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "orientation": "portrait",
-    "icon": "./assets/gita-icon.png",
+    "icon": "./assets/km-gita-ai-logo.png",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
     "splash": {
-      "image": "./assets/splash-icon.png",
+      "image": "./assets/km-gita-ai-logo.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
     "ios": {
       "supportsTablet": true,
+      "usesAppleSignIn": true,
       "bundleIdentifier": "com.deepakruchandani.kalatitmanisha",
-      "buildNumber": "1"
+      "buildNumber": "22",
+      "infoPlist": {
+        "NSPhotoLibraryUsageDescription": "Kalatit Manisha uses photo library access only when you choose to share or save a generated wisdom image.",
+        "CFBundleURLTypes": [
+          {
+            "CFBundleURLSchemes": [
+              "com.googleusercontent.apps.772773340240-1nv1s5p58cgevibbsbe7man68cchuah3"
+            ]
+          },
+          {
+            "CFBundleURLSchemes": [
+              "fb1400517912087706"
+            ]
+          }
+        ]
+      }
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/km-gita-ai-logo.png",
         "backgroundColor": "#ffffff"
       },
       "edgeToEdgeEnabled": true,
       "package": "com.picfundibkokcucse6.KalatitManisha",
-      "versionCode": 1,
+      "versionCode": 22,
       "permissions": [
         "android.permission.ACCESS_COARSE_LOCATION",
         "android.permission.ACCESS_FINE_LOCATION"
@@ -34,7 +50,7 @@
     "web": {
       "bundler": "metro",
       "output": "static",
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/km-favicon-v2.png"
     },
     "plugins": [
       [
@@ -43,10 +59,34 @@
           "origin": "https://kalatitmanisha.com"
         }
       ],
-      "expo-location"
+      "expo-location",
+      "expo-web-browser",
+      "expo-video",
+      "expo-asset",
+      "expo-apple-authentication"
     ],
     "extra": {
+      "AUTH_BASE_URL": "https://kalatitmanisha.com/_functions",
+      "AUTH_BASE_URL_DEV": "https://kalatitmanisha.com/_functions",
+      "PASSWORD_REDIRECT_WEB": "https://app.kalatitmanisha.com/auth-bridge",
+      "PASSWORD_REDIRECT_NATIVE": "kalatitmanisha://auth-bridge",
+      "PASSWORD_REDIRECT_DEV": "kalatitmanisha://auth-bridge",
       "baseUrl": "https://kalatitmanisha.com",
+      "googleExpoClientId": "772773340240-phe2118pbip980j7kfk5bo38fos3ibb4.apps.googleusercontent.com",
+      "googleWebClientId": "772773340240-phe2118pbip980j7kfk5bo38fos3ibb4.apps.googleusercontent.com",
+      "googleAndroidClientId": "772773340240-o1lu4ht7utnpkit2te1g0upup56pv1ai.apps.googleusercontent.com",
+      "googleIosClientId": "772773340240-1nv1s5p58cgevibbsbe7man68cchuah3.apps.googleusercontent.com",
+      "facebookAppId": "1400517912087706",
+      "facebookRedirectUriNative": "fb1400517912087706://authorize",
+      "facebookRedirectUriWeb": "https://app.kalatitmanisha.com/auth-bridge",
+      "facebookUseHostedRedirectOnNative": true,
+      "linkedinClientId": "86aisjxj99rhpv",
+      "linkedinRedirectUriNative": "kalatitmanisha://oauthredirect",
+      "linkedinRedirectUriWeb": "https://app.kalatitmanisha.com/auth-bridge",
+      "linkedinUseHostedRedirectOnNative": true,
+      "appleWebClientId": "com.deepakruchandani.kalatitmanisha.web",
+      "appleRedirectUriWeb": "https://app.kalatitmanisha.com/auth-bridge",
+      "buildNumber": "22",
       "router": {
         "origin": "https://kalatitmanisha.com"
       },
