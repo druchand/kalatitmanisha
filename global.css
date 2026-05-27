@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Web-only behavior: block long-press callouts and text selection outside form fields. */
+html,
+body {
+  -webkit-touch-callout: none;
+}
+
+*:not(input):not(textarea):not([contenteditable="true"]) {
+  -webkit-user-select: none;
+  user-select: none;
+}
